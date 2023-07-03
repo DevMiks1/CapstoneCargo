@@ -13,6 +13,7 @@ export const BookingConfirm = () => {
 
   const navigate = useNavigate();
   const user = localStorage.getItem("user");
+  const globalUrl = "https://cargo-bq9d.onrender.com"
   window.onload = function handleUser() {
     if (!user) {
       navigate("/signin");
@@ -22,7 +23,7 @@ export const BookingConfirm = () => {
   };
   useEffect(() => {
     const fetchData = async () => {
-      const url = "http://localhost:8000/reservation/retrieveAll";
+      const url = `${globalUrl}/reservation/retrieveAll`;
       const method = "GET";
       const header = {
         "Content-Type": "application/json",
@@ -68,7 +69,7 @@ export const BookingConfirm = () => {
         );
         const fetchCarData = async () => {
           const url =
-            "http://localhost:8000/car/retrieve/" +
+            `${globalUrl}/car/retrieve/` +
             data.filter((el) => {
               return el.userid === user;
             })[0].carid;
@@ -99,7 +100,7 @@ export const BookingConfirm = () => {
   // console.log(hasDriver);
   useEffect(() => {
     const fetchData = async () => {
-      const url = "http://localhost:8000/user/retrieve/" + user;
+      const url = `${globalUrl}/user/retrieve/` + user;
       const method = "GET";
       const header = {
         "Content-Type": "application/json",

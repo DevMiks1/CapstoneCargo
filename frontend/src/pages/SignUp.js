@@ -17,9 +17,10 @@ export const SignUp = () => {
   const [fileImageError, setFileImageError] = useState(false);
   const [selectedFile, setSelectedFile] = useState(null);
   const [allUsers, setAllUsers] = useState([]);
+  const globalUrl = "https://cargo-bq9d.onrender.com"
   useEffect(() => {
     const fetchData = async () => {
-      const url = "http://localhost:8000/user/retrieveAll";
+      const url = `${globalUrl}/user/retrieveAll`;
       const method = "GET";
       const header = {
         "Content-Type": "application/json",
@@ -46,7 +47,7 @@ export const SignUp = () => {
       formDataImg.append("image", selectedFile);
       console.log(formDataImg);
       try {
-        const response = await fetch("http://localhost:8000/upload/create", {
+        const response = await fetch(`${globalUrl}/upload/create`, {
           method: "POST",
           headers: {
             "x-auth-token":
@@ -185,7 +186,7 @@ export const SignUp = () => {
   };
   const handleRegister = async (newImgname) => {
     try {
-      let url = "http://localhost:8000/user/create";
+      let url = `${globalUrl}/user/create`;
       let method = "POST";
 
       const res = await fetch(url, {

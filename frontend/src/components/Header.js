@@ -97,16 +97,20 @@ export const Header = () => {
           id="navbar-dropdown"
         >
           <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-            <li>
-              <NavLink
-                exact="true"
-                to="/"
-                className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary md:p-0 "
-                onClick={closeDropdowns}
-              >
-                Home
-              </NavLink>
-            </li>
+          <li>
+            <NavLink
+              exact="true"
+              to="/"
+              className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary md:p-0"
+              onClick={() => {
+                window.scrollTo(0, 0);
+                closeDropdowns();
+              }}
+            >
+              Home
+            </NavLink>
+          </li>
+
             <li>
               <button
                 id="dropdownCarsLink"
@@ -148,7 +152,11 @@ export const Header = () => {
                     <NavLink
                       to="luxury"
                       className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                      onClick={closeDropdowns}
+                      onClick={() => {
+                        window.scrollTo(0, 0);
+                        closeDropdowns();
+                      }}
+
                     >
                       Luxury
                     </NavLink>
@@ -157,7 +165,10 @@ export const Header = () => {
                     <NavLink
                       to="business"
                       className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                      onClick={closeDropdowns}
+                      onClick={() => {
+                        window.scrollTo(0, 0);
+                        closeDropdowns();
+                      }}
                     >
                       Business
                     </NavLink>
@@ -166,7 +177,10 @@ export const Header = () => {
                     <NavLink
                       to="Bridal"
                       className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                      onClick={closeDropdowns}
+                      onClick={() => {
+                        window.scrollTo(0, 0);
+                        closeDropdowns();
+                      }}
                     >
                       Bridal
                     </NavLink>
@@ -175,7 +189,10 @@ export const Header = () => {
                     <NavLink
                       to="family"
                       className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                      onClick={closeDropdowns}
+                      onClick={() => {
+                        window.scrollTo(0, 0);
+                        closeDropdowns();
+                      }}
                     >
                       Family
                     </NavLink>
@@ -184,7 +201,10 @@ export const Header = () => {
                     <NavLink
                       to="casual"
                       className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                      onClick={closeDropdowns}
+                      onClick={() => {
+                        window.scrollTo(0, 0);
+                        closeDropdowns();
+                      }}
                     >
                       Casual
                     </NavLink>
@@ -193,7 +213,10 @@ export const Header = () => {
                     <NavLink
                       to="pickup"
                       className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                      onClick={closeDropdowns}
+                      onClick={() => {
+                        window.scrollTo(0, 0);
+                        closeDropdowns();
+                      }}
                     >
                       Pick-up
                     </NavLink>
@@ -205,7 +228,10 @@ export const Header = () => {
               <NavLink
                 to="about"
                 className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                onClick={closeDropdowns}
+                onClick={() => {
+                  window.scrollTo(0, 0);
+                  closeDropdowns();
+                }}
               >
                 About
               </NavLink>
@@ -214,7 +240,10 @@ export const Header = () => {
               <NavLink
                 to="branches"
                 className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                onClick={closeDropdowns}
+                onClick={() => {
+                  window.scrollTo(0, 0);
+                  closeDropdowns();
+                }}
               >
                 Branches
               </NavLink>
@@ -224,7 +253,10 @@ export const Header = () => {
                 <NavLink
                   to="signin"
                   className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                  onClick={closeDropdowns}
+                  onClick={() => {
+                    window.scrollTo(0, 0);
+                    closeDropdowns();
+                  }}
                 >
                   Sign In
                 </NavLink>

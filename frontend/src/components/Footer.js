@@ -14,8 +14,12 @@ export const Footer = () => {
                   exact="true"
                   to="faqs"
                   className="border-b-2 dark:border-dmode-lightolive py-3 dark:text-color-white px-10"
+                  onClick={() => {
+                    window.scrollTo(0, 0);
+                  }}
                 >
                   FAQs
+                  
                 </NavLink>
               </div>
               <br />
@@ -24,6 +28,9 @@ export const Footer = () => {
                   exact="true"
                   to="contact"
                   className="border-b-2 dark:border-dmode-lightolive py-3 dark:text-color-white px-5"
+                  onClick={() => {
+                    window.scrollTo(0, 0);
+                  }}
                 >
                   Contact Us
                 </NavLink>
@@ -56,6 +63,9 @@ export const Footer = () => {
                   exact="true"
                   to="rentpolicy"
                   className="border-b-2 dark:border-dmode-lightolive py-3 dark:text-color-white px-5"
+                  onClick={() => {
+                    window.scrollTo(0, 0);
+                  }}
                 >
                   Rent Policy
                 </NavLink>
@@ -66,6 +76,9 @@ export const Footer = () => {
                   exact="true"
                   to="licensing"
                   className="border-b-2 dark:border-dmode-lightolive py-3 dark:text-color-white px-10"
+                  onClick={() => {
+                    window.scrollTo(0, 0);
+                  }}
                 >
                   Licensing
                 </NavLink>
@@ -76,6 +89,9 @@ export const Footer = () => {
                   exact="true"
                   to="termsofservice"
                   className="border-b-2 dark:border-dmode-lightolive py-3 dark:text-color-white px-2"
+                  onClick={() => {
+                    window.scrollTo(0, 0);
+                  }}
                 >
                   Terms of Service
                 </NavLink>
@@ -94,6 +110,9 @@ export const Footer = () => {
                     exact="true"
                     to="signin"
                     className="py-3 px-3 bg-button rounded-lg border-none text-white hover:text-primary font-bold"
+                    onClick={() => {
+                      window.scrollTo(0, 0);
+                    }}
                   >
                     Join Our Community
                   </NavLink>

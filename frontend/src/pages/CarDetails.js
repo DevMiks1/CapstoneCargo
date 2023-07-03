@@ -31,10 +31,11 @@ export const CarDetails = () => {
   const search = window.location.search.split("&");
   const pickUpDate = search[1].split("=")[1];
   const returnDate = search[3].split("=")[1];
+  const globalUrl = "https://cargo-bq9d.onrender.com"
 
   useEffect(() => {
     const fetchData = async () => {
-      const url = "http://localhost:8000/car/retrieve/" + details;
+      const url = `${globalUrl}/car/retrieve/` + details;
       const method = "GET";
       const header = {
         "Content-Type": "application/json",

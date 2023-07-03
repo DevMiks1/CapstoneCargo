@@ -34,9 +34,10 @@ export const Reservations = () => {
     page -= 1;
     fetchCar();
   };
+  const globalUrl = "https://cargo-bq9d.onrender.com/"
   useEffect(() => {
     const fetchData = async () => {
-      const url = "http://localhost:8000/reservation/retrieveAll";
+      const url = `${globalUrl}/reservation/retrieveAll`;
       const method = "GET";
       const header = {
         "Content-Type": "application/json",
@@ -60,7 +61,7 @@ export const Reservations = () => {
             return el.carid;
           });
         const fetchCarData = async (filter) => {
-          const url = "http://localhost:8000/car/retrieveAll";
+          const url = `${globalUrl}/car/retrieveAll`;
           const method = "GET";
           const header = {
             "Content-Type": "application/json",
@@ -97,7 +98,7 @@ export const Reservations = () => {
     fetchData();
   }, []);
   const fetchCar = async () => {
-    const url = "http://localhost:8000/reservation/retrieveAll";
+    const url = `${globalUrl}/reservation/retrieveAll`;
     const method = "GET";
     const header = {
       "Content-Type": "application/json",
@@ -121,7 +122,7 @@ export const Reservations = () => {
           return el.carid;
         });
       const fetchCarData = async (filter) => {
-        const url = "http://localhost:8000/car/retrieveAll";
+        const url = `${globalUrl}/car/retrieveAll`;
         const method = "GET";
         const header = {
           "Content-Type": "application/json",

@@ -37,9 +37,11 @@ export const FinalDetails = () => {
   const handleCheckboxChange = (event) => {
     setIsChecked(event.target.checked);
   };
+
+  const globalUrl = "https://cargo-bq9d.onrender.com"
   useEffect(() => {
     const fetchData = async () => {
-      const url = "http://localhost:8000/car/retrieve/" + details;
+      const url = `${globalUrl}/car/retrieve/` + details;
       const method = "GET";
       const header = {
         "Content-Type": "application/json",
@@ -62,7 +64,7 @@ export const FinalDetails = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const url = "http://localhost:8000/user/retrieve/" + user;
+      const url = `${globalUrl}/user/retrieve/` + user;
       const method = "GET";
       const header = {
         "Content-Type": "application/json",
@@ -127,7 +129,7 @@ export const FinalDetails = () => {
   console.log(formData);
   const handleBook = async () => {
     try {
-      let url = "http://localhost:8000/reservation/create";
+      let url = `${globalUrl}/reservation/create`;
       let method = "POST";
 
       const res = await fetch(url, {

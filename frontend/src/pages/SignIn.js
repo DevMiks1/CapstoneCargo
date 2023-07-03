@@ -21,9 +21,10 @@ export const SignIn = () => {
   const passwordTry = (logPassword) => {
     setPassword(logPassword);
   };
+  const globalUrl = "https://cargo-bq9d.onrender.com"
   useEffect(() => {
     const fetchData = async () => {
-      const url = "http://localhost:8000/user/retrieveAll";
+      const url = `${globalUrl}/user/retrieveAll`;
       const method = "GET";
       const header = {
         "Content-Type": "application/json",
