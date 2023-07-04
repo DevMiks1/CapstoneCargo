@@ -24,6 +24,7 @@ export const DeleteAccount = () => {
   const navigate = useNavigate();
   const [userDetails, setUserDetails] = useState({});
   const user = localStorage.getItem("user");
+  const globalUrl = "https://cargo-bq9d.onrender.com"
   window.onload = function handleUser() {
     if (!user) {
       navigate("/signin");
@@ -32,7 +33,7 @@ export const DeleteAccount = () => {
   };
   useEffect(() => {
     const fetchData = async () => {
-      const url = "http://localhost:8000/user/retrieve/" + user;
+      const url = `${globalUrl}/user/retrieve/` + user;
       const method = "GET";
       const header = {
         "Content-Type": "application/json",
@@ -62,7 +63,7 @@ export const DeleteAccount = () => {
 
   const handleDelete = async () => {
     try {
-      let url = "http://localhost:8000/user/delete/" + user;
+      let url = `${globalUrl}/user/delete/` + user;
       let method = "DELETE";
 
       const res = await fetch(url, {

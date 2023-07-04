@@ -21,10 +21,9 @@ export const SignIn = () => {
   const passwordTry = (logPassword) => {
     setPassword(logPassword);
   };
-  const globalUrl = "https://cargo-bq9d.onrender.com"
   useEffect(() => {
     const fetchData = async () => {
-      const url = `${globalUrl}/user/retrieveAll`;
+      const url = "https://cargo-bq9d.onrender.com/user/retrieveAll";
       const method = "GET";
       const header = {
         "Content-Type": "application/json",
@@ -68,13 +67,13 @@ export const SignIn = () => {
   };
   return (
     <div>
-      <div className="mt-24 flex flex-col items-center justify-center py-20">
+      <div className="mt-24 flex flex-col items-center justify-center">
         <div>
-          <h2 className="text-5xl pb-5 text-primary font-bold">Sign In</h2>
+          <h2 className="text-5xl pb-5">Sign In</h2>
         </div>
         <form action="" className="w-full __container2">
           <div className=" mb-4">
-            <label className=" text-sm font-medium -++*">Email</label>
+            <label className=" text-sm font-medium text-gray-700">Email</label>
             <input
               type="text"
               id="username"
@@ -84,7 +83,7 @@ export const SignIn = () => {
             />
           </div>
           <div className=" mb-4">
-            <label className=" text-sm font-medium ">
+            <label className=" text-sm font-medium text-gray-700">
               Password
             </label>
             <input
@@ -104,12 +103,12 @@ export const SignIn = () => {
                   defaultChecked
                   className="form-checkbox"
                 />
-                <span className="ml-2 font-bold">Remember me</span>
+                <span className="ml-2">Remember me</span>
               </label>
               <div className="flex justify-end">
                 <NavLink
                   to="/contact"
-                  className="text-primary hover:underline font-bold"
+                  className="text-blue-500 hover:underline"
                 >
                   Forgot password?
                 </NavLink>

@@ -197,7 +197,7 @@ export const CarDetails = () => {
             <form action="">
               <div className=" grid lg:grid-cols-2">
                 <div className="pt-10">
-                  <img src={tesla} alt="" className="h-64 " />
+                  <img src={"https://cargo-bq9d.onrender.com/uploads/" + carDetails.textdescription } alt="" className="h-64 " />
                 </div>
                 <div className="pt-10">
                   <h2 className="texct-primary text-2xl text-center py-5 text-primary font-semibold">
@@ -378,7 +378,7 @@ export const CarDetails = () => {
                     <div className="lg:col-start-2 col-span-2 sm:col-span-1 lg:col-span-2 flex justify-end  md:justify-end lg:justify-center">
                       <div className="flex flex-col w-36 sm:w-auto lg:w-auto bg-primary px-2 md:px-5 lg:px-10 py-2 rounded-tl-3xl text-white text-center font-semibold">
                         <p className="lg:text-lg ">W/ CarGo Protect</p>
-                        <p>One-Time Price: Php 5,000</p>
+                        <p>One-Time Price: Php 500</p>
                       </div>
                       <div className="bg-others py-2 w-36 lg:w-auto sm:w-auto sm:px-7 md:px-3 lg:px-14 flex justify-center items-center rounded-tr-3xl font-semibold">
                         <p className="text-xl">Regular Book</p>

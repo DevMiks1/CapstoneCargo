@@ -8,6 +8,7 @@ import bentley from "../assets/cartype/bridal/bridal cars-bentley-flying-spur.jp
 import limo from "../assets/cartype/bridal/bridal cars-chrysler limo.webp";
 import beauford from "../assets/cartype/bridal/bridal cars-vintage beauford.webp";
 import hummer from "../assets/cartype/bridal/bridal cars-hummer stretch limo.webp";
+import { NavLink } from "react-router-dom";
 
 export const Bridal = () => {
   return (
@@ -58,9 +59,11 @@ export const Bridal = () => {
                   <p className="font-semibold">Php 15,000 / Day</p>
                 </div>
                 <div className="text-center">
-                  <button className="text-center p-1  bg-button text-white rounded-lg px-5">
+                <NavLink to="/"> <button className="text-center p-1  bg-button text-white rounded-lg px-5" onClick={() => {
+                  window.scrollTo(0, 0);
+                  }}>
                     Rent Now
-                  </button>
+                  </button></NavLink>
                 </div>
               </div>
             </div>
@@ -107,9 +110,11 @@ export const Bridal = () => {
                   <p className="font-semibold">Php 13,000 / Day</p>
                 </div>
                 <div className="text-center">
-                  <button className="text-center p-1  bg-button text-white rounded-lg px-5">
+                <NavLink to="/"> <button className="text-center p-1  bg-button text-white rounded-lg px-5" onClick={() => {
+                  window.scrollTo(0, 0);
+                  }}>
                     Rent Now
-                  </button>
+                  </button></NavLink>
                 </div>
               </div>
             </div>
@@ -156,9 +161,11 @@ export const Bridal = () => {
                   <p className="font-semibold">Php 12,000 / Day</p>
                 </div>
                 <div className="text-center">
-                  <button className="text-center p-1  bg-button text-white rounded-lg px-5">
+                <NavLink to="/"> <button className="text-center p-1  bg-button text-white rounded-lg px-5" onClick={() => {
+                  window.scrollTo(0, 0);
+                  }}>
                     Rent Now
-                  </button>
+                  </button></NavLink>
                 </div>
               </div>
             </div>
@@ -205,9 +212,11 @@ export const Bridal = () => {
                   <p className="font-semibold">Php 35,000 / Day</p>
                 </div>
                 <div className="text-center">
-                  <button className="text-center p-1  bg-button text-white rounded-lg px-5">
+                <NavLink to="/"> <button className="text-center p-1  bg-button text-white rounded-lg px-5" onClick={() => {
+                  window.scrollTo(0, 0);
+                  }}>
                     Rent Now
-                  </button>
+                  </button></NavLink>
                 </div>
               </div>
             </div>
@@ -254,9 +263,11 @@ export const Bridal = () => {
                   <p className="font-semibold">Php 10,000 / Day</p>
                 </div>
                 <div className="text-center">
-                  <button className="text-center p-1  bg-button text-white rounded-lg px-5">
+                <NavLink to="/"> <button className="text-center p-1  bg-button text-white rounded-lg px-5" onClick={() => {
+                  window.scrollTo(0, 0);
+                  }}>
                     Rent Now
-                  </button>
+                  </button></NavLink>
                 </div>
               </div>
             </div>
@@ -302,9 +313,11 @@ export const Bridal = () => {
                   <p className="font-semibold">Php 35,000 / Day</p>
                 </div>
                 <div className="text-center">
-                  <button className="text-center p-1 bg-button text-white rounded-lg px-5">
+                <NavLink to="/"> <button className="text-center p-1  bg-button text-white rounded-lg px-5" onClick={() => {
+                  window.scrollTo(0, 0);
+                  }}>
                     Rent Now
-                  </button>
+                  </button></NavLink>
                 </div>
               </div>
             </div>

@@ -53,11 +53,10 @@ export const Driver = () => {
     setSelfDrive(false);
     setIsChecked(false);
   };
-  const globalUrl = "https://cargo-bq9d.onrender.com"
   const [carDetails, setCarDetails] = useState({});
   useEffect(() => {
     const fetchData = async () => {
-      const url = `${globalUrl}/car/retrieve/` + details;
+      const url = "https://cargo-bq9d.onrender.com/car/retrieve/" + details;
       const method = "GET";
       const header = {
         "Content-Type": "application/json",
@@ -256,7 +255,7 @@ export const Driver = () => {
       formDataImg.append("image", selectedFile);
       console.log(formDataImg);
       try {
-        const response = await fetch(`${globalUrl}/upload/create`, {
+        const response = await fetch("https://cargo-bq9d.onrender.com/upload/create", {
           method: "POST",
           headers: {
             "x-auth-token":

@@ -46,12 +46,9 @@
 }
 #navbar a.active {
   color: #0097B2;
-  /* display: block;
-    background:#3399cc ;
-    color: #fff;
-        
-    border-radius: 5px;
-    margin: 0; */
+}
+#sidebar a.active{
+  color: white;
 }
 .container-family{
   max-width: 1280px;

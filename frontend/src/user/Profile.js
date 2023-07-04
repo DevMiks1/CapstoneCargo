@@ -1,7 +1,7 @@
 import Sidebar from "../components/User/Sidebar";
 import { useState } from "react";
 import { useEffect } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink,Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
 import Upload from "../assets/User.png";
@@ -11,15 +11,18 @@ export const Profile = () => {
   const [userDetails, setUserDetails] = useState({});
   const [userBirthday, setBirthday] = useState("");
   const user = localStorage.getItem("user");
+  const imgSrc = "https://cargo-bq9d.onrender.com/uploads/"
+
   window.onload = function handleUser() {
     if (!user) {
       navigate("/signin");
       // alert("Please log in first to continue");
     }
   };
+  const globalUrl = "https://cargo-bq9d.onrender.com"
   useEffect(() => {
     const fetchData = async () => {
-      const url = "http://localhost:8000/user/retrieve/" + user;
+      const url = `${globalUrl}/user/retrieve/` + user;
       const method = "GET";
       const header = {
         "Content-Type": "application/json",
@@ -49,12 +52,16 @@ export const Profile = () => {
               <Sidebar />
             </div>
             <div className="basis-[80%]">
-              <NavLink
-                to="/editprofile"
-                className="block text-primary text-lg px-10 py-5 hover:underline"
-              >
-                Edit your Profile
-              </NavLink>
+                <h2
+                  className="text-primary cursor-pointer flex pt-10 px-10 text-2xl"
+                
+                >
+                  Profile Details
+                  <Link to="/editprofile"className="text-black text-lg ml-2 flex flex-start justify-end text-cyan-500">
+                    Edit 
+                  </Link>
+                </h2>
+              
               <div className="px-10 mt-10 grid grid-cols-2 gap-5">
                 <div>
                   <p>Full Name:</p>
@@ -104,7 +111,7 @@ export const Profile = () => {
               <div className="flex flex-col items-start justify-center pt-10 pb-10 px-10">
                 <p>Valid ID:</p>
                 <div>
-                  <img src={Upload}></img>
+                  <img src={imgSrc + userDetails.valididimg}></img>
                 </div>
               </div>
             </div>

@@ -9,15 +9,17 @@ export const ReservationCard = ({ reservation }) => {
   const [userDetails, setUserDetails] = useState({});
   const [carDetails, setCarDetails] = useState({});
   const user = localStorage.getItem("user");
+  const globalUrl = "https://cargo-bq9d.onrender.com"
   window.onload = function handleUser() {
     if (!user) {
       navigate("/signin");
       // alert("Please log in first to continue");
     }
   };
+  
   useEffect(() => {
     const fetchData = async () => {
-      const url = "http://localhost:8000/user/retrieve/" + user;
+      const url = `${globalUrl}/user/retrieve/` + user;
       const method = "GET";
       const header = {
         "Content-Type": "application/json",
@@ -39,7 +41,7 @@ export const ReservationCard = ({ reservation }) => {
   }, []);
   useEffect(() => {
     const fetchData = async () => {
-      const url = "http://localhost:8000/car/retrieve/" + reservation.carid;
+      const url = `${globalUrl}/car/retrieve/` + reservation.carid;
       const method = "GET";
       const header = {
         "Content-Type": "application/json",
@@ -77,7 +79,7 @@ export const ReservationCard = ({ reservation }) => {
         onClick={(e) => handleShow(e)}
       >
         ID #{reservation._id}
-        <span className="text-sm ml-2 flex flex-start justify-end text-red-600">
+        <span className="text-sm ml-2 flex flex-start justify-end text-cyan-500">
           {reservation.paymentstatus.toUpperCase()}
         </span>
       </h2>

@@ -3,12 +3,13 @@ import luxury from "../assets/catergories/luxury-mercedez-benz.png";
 import { Link } from "react-router-dom";
 export const CarCard = ({ car }) => {
   //   const navigate = useNavigate();
+  const imgSrc = "https://cargo-bq9d.onrender.com/uploads/"
   let detailsLink = `/cardetails/${car._id}`;
   return (
     <div className=" border bg-shade rounded-lg grid">
       <div className="h-56 overflow-hidden">
         <img
-          src={luxury}
+          src={imgSrc + car.textdescription}
           className="rounded-lg w-full h-full object-cover"
           alt="Toyota Avanza"
         />

@@ -383,6 +383,9 @@ export const Home = () => {
                     <NavLink
                       to="/luxury"
                       className=" bg-button p-2 px-10 rounded-xl text-white font-semibold text-2xl"
+                      onClick={() => {
+                        window.scrollTo(0, 0);
+                      }}
                     >
                       View Now
                     </NavLink>
@@ -410,6 +413,9 @@ export const Home = () => {
                     <NavLink
                       to="/business"
                       className="bg-button p-2 px-10 rounded-xl text-white font-semibold text-2xl"
+                      onClick={() => {
+                        window.scrollTo(0, 0);
+                      }}
                     >
                       View Now
                     </NavLink>
@@ -437,6 +443,9 @@ export const Home = () => {
                       <NavLink
                         to="pickup"
                         className="bg-button p-2 px-10 rounded-xl text-white font-semibold text-2xl"
+                        onClick={() => {
+                          window.scrollTo(0, 0);
+                        }}
                       >
                         View Now
                       </NavLink>
@@ -465,6 +474,9 @@ export const Home = () => {
                       <NavLink
                         to="bridal"
                         className="bg-button p-2 px-10 rounded-xl text-white font-semibold text-2xl"
+                        onClick={() => {
+                          window.scrollTo(0, 0);
+                        }}
                       >
                         View Now
                       </NavLink>
@@ -494,6 +506,9 @@ export const Home = () => {
                       <NavLink
                         to="family"
                         className="bg-button p-2 px-10 rounded-xl text-white font-semibold text-2xl"
+                        onClick={() => {
+                          window.scrollTo(0, 0);
+                        }}
                       >
                         View Now
                       </NavLink>
@@ -523,6 +538,9 @@ export const Home = () => {
                       <NavLink
                         to="casual"
                         className="bg-button p-2 px-10 rounded-xl text-white font-semibold text-2xl"
+                        onClick={() => {
+                          window.scrollTo(0, 0);
+                        }}
                       >
                         View Now
                       </NavLink>

@@ -310,6 +310,7 @@ export const SignUp = () => {
       setValidIDSubmitted(false);
     }
   };
+  
 
   const validateForm = () => {
     validateIDNumber();
@@ -401,6 +402,11 @@ export const SignUp = () => {
     }
     if (!validIdPhoto) {
       setUploadError("Image is required");
+    }
+    if (age < 0) {
+      errors.birthdate = "Invalid birthdate";
+    } else if (age < 18) {
+      errors.age = "Age must be at least 18";
     }
 
     // Add validation rules for other fields...

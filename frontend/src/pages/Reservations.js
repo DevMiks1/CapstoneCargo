@@ -1,17 +1,8 @@
-import {
-  FaBuilding,
-  FaSearch,
-  FaTimesCircle,
-  FaFilter,
-  FaUsers,
-  FaTachometerAlt,
-  FaCogs,
-  FaCarAlt,
-} from "react-icons/fa";
+import { FaBuilding, FaSearch, FaCarAlt } from "react-icons/fa";
 import { useState } from "react";
 import CarCard from "../components/CarCArd";
 import { useEffect } from "react";
-import { NavLink, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export const Reservations = () => {
   const [carFilter, setCarFilter] = useState([]);
@@ -25,16 +16,19 @@ export const Reservations = () => {
   const returnTime = path[4].split("=")[1];
   let page = Number(path[6].split("=")[1]);
   const carType = path[5].split("=")[1];
+  const globalUrl = "https://cargo-bq9d.onrender.com"
   const nextLink = window.location.search.split("&page=")[0];
+  
   const nextPage = () => {
     page += 1;
     fetchCar();
+    window.scrollTo(0, 0);
   };
   const prevPage = () => {
     page -= 1;
     fetchCar();
+    window.scrollTo(0, 0);
   };
-  const globalUrl = "https://cargo-bq9d.onrender.com/"
   useEffect(() => {
     const fetchData = async () => {
       const url = `${globalUrl}/reservation/retrieveAll`;
@@ -96,9 +90,10 @@ export const Reservations = () => {
       }
     };
     fetchData();
-  }, []);
+  });
+
   const fetchCar = async () => {
-    const url = `${globalUrl}/reservation/retrieveAll`;
+    const url = `${globalUrl}/car/retrieveAll`;
     const method = "GET";
     const header = {
       "Content-Type": "application/json",
@@ -337,12 +332,12 @@ export const Reservations = () => {
             </form>
           </div>
 
-          <div className=" flex justify-center items-center  xl:mx-auto xl:w-max rounded-lg bg-white relative bottom-16 sm:bottom-10 px-5 mx-5 lg:px-1 xl:px-5 py-5">
+          <div className=" flex justify-center items-center  xl:mx-auto xl:w-max rounded-lg bg-primary relative bottom-16 sm:bottom-10 px-5 mx-5 lg:px-1 xl:px-5 py-5">
             <form action="">
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-1 justify-center items-center">
                 {/* Car specs */}
-                <div className="flex justify-center items-center rounded-lg bg-white py-4 col-span-2 lg:col-span-1">
-                  <div className="relative flex flex-row">
+                <div className="flex justify-center items-center rounded-lg bg-white py-4 ">
+                  <div className="relative flex flex-row px-5">
                     <FaBuilding size="2rem" className="text-primary" />
                     <h2 className="text-3xl ml-3">{location}</h2>
                   </div>
@@ -437,7 +432,7 @@ export const Reservations = () => {
             )}
 
             <h3 className="px-5">Page {page}</h3>
-            {(page + 1) * 12 < totalCar ? (
+            {page * 12 < totalCar ? (
               <Link
                 to={
                   "/reservation" + nextLink + "&page=" + (page + 1).toString()

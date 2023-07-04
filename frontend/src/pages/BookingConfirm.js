@@ -244,12 +244,18 @@ export const BookingConfirm = () => {
               <NavLink
                 to="/"
                 className="text-right text-primary text-lg hover:underline"
+                onClick={() => {
+                  window.scrollTo(0, 0);
+                }}
               >
                 Back to Home
               </NavLink>
               <NavLink
                 to="/user/reservation"
                 className="text-right text-primary text-lg pb-5 hover:underline"
+                onClick={() => {
+                  window.scrollTo(0, 0);
+                }}
               >
                 Check your Reservations
               </NavLink>

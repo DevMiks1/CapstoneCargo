@@ -19,7 +19,7 @@ import {
   FaUser,
   FaKey,
 } from "react-icons/fa";
-
+const globalUrl = "https://cargo-bq9d.onrender.com"
 export const ChangePassword = () => {
   const navigate = useNavigate();
   const [userDetails, setUserDetails] = useState({});
@@ -32,7 +32,7 @@ export const ChangePassword = () => {
   };
   useEffect(() => {
     const fetchData = async () => {
-      const url = "http://localhost:8000/user/retrieve/" + user;
+      const url = `${globalUrl}/user/retrieve/` + user;
       const method = "GET";
       const header = {
         "Content-Type": "application/json",
@@ -62,7 +62,7 @@ export const ChangePassword = () => {
   const handleUpdate = async () => {
     console.log(formErrors);
     try {
-      let url = "http://localhost:8000/user/update/" + user;
+      let url = `${globalUrl}/user/update/` + user;
       let method = "PUT";
 
       const res = await fetch(url, {

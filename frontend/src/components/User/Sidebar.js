@@ -15,8 +15,13 @@ import {
 import profile from "../../assets/User.png";
 import { useState } from "react";
 import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+
+
+
 
 const Sidebar = () => {
+  const navigate = useNavigate();
   const [userDetails, setUserDetails] = useState({});
   const user = localStorage.getItem("user");
   useEffect(() => {
@@ -41,6 +46,11 @@ const Sidebar = () => {
     };
     fetchData();
   }, []);
+
+  const logOut = () => {
+    localStorage.clear();
+    navigate("/");
+  };
   return (
     <div id="sidebar" className="bg-primary h-full px-5">
       <div className="flex flex-col items-center relative pt-10">
@@ -118,8 +128,9 @@ const Sidebar = () => {
         <div className="flex items-center gap-4 pb-10">
           <FaSignOutAlt className="text-black" />
           <NavLink
-            to="logout"
+            to="/"
             className="text-base leading-6 font-normal text-black hover:text-white"
+            onClick={logOut}
           >
             Logout
           </NavLink>

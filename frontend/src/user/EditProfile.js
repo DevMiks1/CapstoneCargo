@@ -12,6 +12,7 @@ export const EditProfile = () => {
       // alert("Please log in first to continue");
     }
   };
+  const globalUrl = "https://cargo-bq9d.onrender.com/"
   const handleSubmit = (e) => {
     e.preventDefault(e);
     if (validateForm()) {
@@ -20,7 +21,7 @@ export const EditProfile = () => {
   };
   const handleUpdate = async (e) => {
     try {
-      let url = "http://localhost:8000/user/update/" + user;
+      let url = `${globalUrl}/user/update/` + user;
       let method = "PUT";
 
       const res = await fetch(url, {
