@@ -12,7 +12,7 @@ export const EditProfile = () => {
       // alert("Please log in first to continue");
     }
   };
-  const globalUrl = "https://cargo-bq9d.onrender.com/"
+  const globalUrl = "https://cargo-bq9d.onrender.com"
   const handleSubmit = (e) => {
     e.preventDefault(e);
     if (validateForm()) {
