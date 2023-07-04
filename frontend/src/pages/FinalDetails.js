@@ -92,6 +92,7 @@ export const FinalDetails = () => {
       console.log("Booking confirmed!");
       handleBook();
     }
+      window.scrollTo(0, 0);
   };
 
   const closeModal = () => {
@@ -248,7 +249,7 @@ export const FinalDetails = () => {
                   className="py-2 px-10 bg-button text-white rounded-lg"
                   onClick={handleConfirmClick}
                 >
-                  Confirm
+                  Book Now
                 </button>
               </div>
             </div>

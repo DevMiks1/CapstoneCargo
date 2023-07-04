@@ -21,8 +21,8 @@ export const CarDetails = () => {
   const [showProtect, setShowProtect] = useState(false);
   const [showProtect1, setShowProtect1] = useState(false);
   const [showProtect2, setShowProtect2] = useState(false);
-  const [showMessage, setShowMessage] = useState(false);
-  const [showMessage1, setShowMessage1] = useState(false);
+ 
+  
   const [insurance, setInsurance] = useState(0);
   const [carDetails, setCarDetails] = useState({});
 
@@ -63,12 +63,7 @@ export const CarDetails = () => {
 
   const nextLink = `/driver/${carDetails._id}${window.location.search}&addOns=${insurance}`;
 
-  const toggleMessage = () => {
-    setShowMessage(!showMessage);
-  };
-  const toggleMessage1 = () => {
-    setShowMessage1(!showMessage1);
-  };
+  
 
   const toggleInclusion = () => {
     setShowInclusion(!showInclusion);
@@ -280,32 +275,22 @@ export const CarDetails = () => {
                   <div className="flex items-center lg:justify-center gap-2 relative">
                     <img src={CheckBlue} alt="" className="h-6 w-6" />
                     <p
-                      onMouseOver={toggleMessage}
-                      onMouseOut={toggleMessage}
-                      className="hover:cursor-pointer hover:text-primary"
+                      
+                      
                     >
                       Unlimited Mileage
                     </p>
-                    {showMessage && (
-                      <div className="absolute top-[-40px]  transform  p-2 bg-black text-white text-sm rounded">
-                        This vehicle comes with unlimited mileage.
-                      </div>
-                    )}
+                    
                   </div>
                   <div className="flex items-center lg:justify-center gap-2 relative">
                     <img src={CheckBlue} alt="" className="h-6 w-6" />
                     <p
-                      onMouseOver={toggleMessage1}
-                      onMouseOut={toggleMessage1}
-                      className="hover:cursor-pointer hover:text-primary"
+                      
+                      
                     >
                       Child Safety Seats
                     </p>
-                    {showMessage1 && (
-                      <div className="absolute top-[-40px]  transform  p-2 bg-black text-white text-sm rounded">
-                        This vehicle comes with comfortable seats.
-                      </div>
-                    )}
+                    
                   </div>
                   <div className="flex items-center lg:justify-center gap-2 lg:pr-20">
                     <img src={CheckBlue} alt="" className="h-6 w-6" />
@@ -591,7 +576,10 @@ export const CarDetails = () => {
                   </div>
                   <div className="text-center pb-4">
                     <NavLink to={user ? nextLink : "/signin"}>
-                      <button className="py-1 px-10 bg-button text-white rounded-lg">
+                      <button className="py-1 px-10 bg-button text-white rounded-lg" onClick={() => {
+                window.scrollTo(0, 0);
+              }}>
+                        
                         Continue
                       </button>
                     </NavLink>

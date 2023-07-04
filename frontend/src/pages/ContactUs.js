@@ -121,7 +121,7 @@ export const ContactUs = () => {
             id="message"
             cols="30"
             rows="10"
-            value=""
+            value={message}
             onChange={handleMessage}
             className="border rounded-lg p-2 w-full "
           ></textarea>

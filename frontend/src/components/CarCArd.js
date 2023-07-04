@@ -49,7 +49,10 @@ export const CarCard = ({ car }) => {
           </div>
           <div className="text-center">
             <Link to={detailsLink + window.location.search.split("&page=")[0]}>
-              <button className="text-center p-1 bg-red-600 text-white rounded-lg px-5">
+              <button className="text-center p-1 bg-red-600 text-white rounded-lg px-5" 
+              onClick={() => {
+                window.scrollTo(0, 0);
+              }}>
                 Rent Now
               </button>
             </Link>
