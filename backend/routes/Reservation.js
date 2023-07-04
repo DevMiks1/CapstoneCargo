@@ -8,7 +8,7 @@ const CreateReservation = require("../services/reservation/Create");
 const RetrieveAllReservation = require("../services/reservation/RetrieveAll");
 const DeleteReservation = require("../services/reservation/Delete");
 const UpdateReservation = require("../services/reservation/Update");
-const RetrieveReservation = require("../services/reservation/RetrieveAll");
+const RetrieveReservation = require("../services/reservation/Retrieve");
 
 router.use(authMiddleware);
 router.post("/create", async (req, res) => {

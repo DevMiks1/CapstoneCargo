@@ -62,30 +62,17 @@ router.post('/create', upload.single("image"), async (req, res) => {
 });
 
 // Get all images
-router.get("/retrieveAll",upload.single("image"), async (req,res) => {
-  
-  
+router.get("/retrieveAll",upload.single("image"), async (req, res) => {
   const results = await RetrieveAllUploading();
   if (results) {
-    const formattedResults = results.map((image) => ({
-      _id: image._id,
-      filename: newName,
-      originalname: image.originalname,
-      mimetype: image.mimetype,
-      size: image.size,
-      created_at: image.created_at,
-      
-    }));
-    res.status(200).send(
-      formattedResults
-    );
+    res.status(200).send(results);
   } else {
     res.status(500).send({
-      status: false,
+      status: results,
       message: "Not Retrieved",
     });
   }
-})
+});
   
 router.get("/retrieve/:id",upload.single("image"), async (req,res) => {
   const _id = req.params.id;
